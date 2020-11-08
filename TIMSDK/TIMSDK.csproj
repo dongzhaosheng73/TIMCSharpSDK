@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17373F38-E023-4A2A-988B-89DC914B2C7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TIMSDK</RootNamespace>
+    <AssemblyName>TIMSDK</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\Core\Client\TIMClient.cs" />
+    <Compile Include="API\Core\Client\TIMClientAPIDef.cs" />
+    <Compile Include="API\Core\Client\TIMGlobal.cs" />
+    <Compile Include="API\Core\Command\EventArgs.cs" />
+    <Compile Include="API\Core\Enum\TIMAndroidOfflinePushNotifyMode.cs" />
+    <Compile Include="API\Core\Enum\TIMConvEvent.cs" />
+    <Compile Include="API\Core\Enum\TIMConvType.cs" />
+    <Compile Include="API\Core\Command\TIMGlobalDef.cs" />
+    <Compile Include="API\Core\Enum\TIMDownloadType.cs" />
+    <Compile Include="API\Core\Enum\TIMElemType.cs" />
+    <Compile Include="API\Core\Enum\TIMGenderType.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupAddOption.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupMemberInfoFlag.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupMemberModifyInfoFlag.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupMemberRole.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupMemberRoleFlag.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupModifyInfoFlag.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupPendencyHandle.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupPendencyHandleResult.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupPendencyType.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupReceiveMessageOpt.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupTipGroupChangeFlag.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupTipType.cs" />
+    <Compile Include="API\Core\Enum\TIMGroupType.cs" />
+    <Compile Include="API\Core\Enum\TIMHandleGroupMemberResult.cs" />
+    <Compile Include="API\Core\Enum\TIMImageLevel.cs" />
+    <Compile Include="API\Core\Enum\TIMLogLevel.cs" />
+    <Compile Include="API\Core\Enum\TIMMsgPriority.cs" />
+    <Compile Include="API\Core\Enum\TIMMsgStatus.cs" />
+    <Compile Include="API\Core\Enum\TIMNetworkStatus.cs" />
+    <Compile Include="API\Core\Enum\TIMOfflinePushFlag.cs" />
+    <Compile Include="API\Core\Enum\TIMProfileAddPermission.cs" />
+    <Compile Include="API\Core\Enum\TIMResult.cs" />
+    <Compile Include="API\Core\Model\AndroidOfflinePushConfig.cs" />
+    <Compile Include="API\Core\Model\CreateGroupParam.cs" />
+    <Compile Include="API\Core\Model\GetGroupInfoResult.cs" />
+    <Compile Include="API\Core\Model\GetGroupPendencyParam.cs" />
+    <Compile Include="API\Core\Model\GetProfileListParam.cs" />
+    <Compile Include="API\Core\Model\GroupBaseInfo.cs" />
+    <Compile Include="API\Core\Model\GroupDeleteMemberParam.cs" />
+    <Compile Include="API\Core\Model\GroupDeleteMemberResult.cs" />
+    <Compile Include="API\Core\Model\GroupDetailInfo.cs" />
+    <Compile Include="API\Core\Model\GroupGetMemberInfoListParam.cs" />
+    <Compile Include="API\Core\Model\GroupGetMemberInfoListResult.cs" />
+    <Compile Include="API\Core\Model\GroupInviteMemberParam.cs" />
+    <Compile Include="API\Core\Model\GroupInviteMemberResult.cs" />
+    <Compile Include="API\Core\Model\GroupMemberGetInfoOption.cs" />
+    <Compile Include="API\Core\Model\GroupModifyInfoParam.cs" />
+    <Compile Include="API\Core\Model\GroupModifyMemberInfoParam.cs" />
+    <Compile Include="API\Core\Model\GroupPendency.cs" />
+    <Compile Include="API\Core\Model\GroupPendencyResult.cs" />
+    <Compile Include="API\Core\Model\GroupSelfInfo.cs" />
+    <Compile Include="API\Core\Model\GroupTipGroupChangeInfo.cs" />
+    <Compile Include="API\Core\Model\GroupTipMemberChangeInfo.cs" />
+    <Compile Include="API\Core\Model\IMCreateGroupResult.cs" />
+    <Compile Include="API\Core\Model\GroupInfoCustemString.cs" />
+    <Compile Include="API\Core\Model\IMConvCreateResult.cs" />
+    <Compile Include="API\Core\Model\IMConvGetConvListResult.cs" />
+    <Compile Include="API\Core\Model\ConvInfo.cs" />
+    <Compile Include="API\Core\Model\DownloadElemParam.cs" />
+    <Compile Include="API\Core\Model\Draft.cs" />
+    <Compile Include="API\Core\Model\Elem.cs" />
+    <Compile Include="API\Core\Model\CreateGroupResult.cs" />
+    <Compile Include="API\Core\Model\IMessage.cs" />
+    <Compile Include="API\Core\Model\IMGroupBaseInfoResult.cs" />
+    <Compile Include="API\Core\Model\IMGroupDeleteMemberResult.cs" />
+    <Compile Include="API\Core\Model\IMGroupGetGroupInfoListResult.cs" />
+    <Compile Include="API\Core\Model\IMGroupGetMemberInfoListResult.cs" />
+    <Compile Include="API\Core\Model\IMGroupInviteMemberResult.cs" />
+    <Compile Include="API\Core\Model\IMGroupPendencyResult.cs" />
+    <Compile Include="API\Core\Model\IMMsgBatchSendResult.cs" />
+    <Compile Include="API\Core\Model\IMUserProfileResult.cs" />
+    <Compile Include="API\Core\Model\MessageReceipt.cs" />
+    <Compile Include="API\Core\Model\MsgBatchSendParam.cs" />
+    <Compile Include="API\Core\Model\MsgBatchSendResult.cs" />
+    <Compile Include="API\Core\Model\MsgGetMsgListParam.cs" />
+    <Compile Include="API\Core\Model\GroupMemberInfo.cs" />
+    <Compile Include="API\Core\Model\IMDownloadElemResult.cs" />
+    <Compile Include="API\Core\Model\IMResult.cs" />
+    <Compile Include="API\Core\Model\IOSOfflinePushConfig.cs" />
+    <Compile Include="API\Core\Model\IMMsgArrayResult.cs" />
+    <Compile Include="API\Core\Model\MsgDeleteParam.cs" />
+    <Compile Include="API\Core\Model\MsgDownloadElemResult.cs" />
+    <Compile Include="API\Core\Model\MsgLocator.cs" />
+    <Compile Include="API\Core\Model\TMessage.cs" />
+    <Compile Include="API\Core\Model\IMMsgResult.cs" />
+    <Compile Include="API\Core\Model\OfflinePushConfig.cs" />
+    <Compile Include="API\Core\Model\SdKConfig.cs" />
+    <Compile Include="API\Core\Model\UserProfile.cs" />
+    <Compile Include="API\Core\Model\UserProfileCustemStringInfo.cs" />
+    <Compile Include="MonoPInvokeCallbackAttribute.cs" />
+    <Compile Include="TIMUtiity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

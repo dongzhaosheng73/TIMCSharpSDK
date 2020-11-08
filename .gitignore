@@ -1,0 +1,15 @@
+Backup/
+bin/
+obj/
+packages/
+pub/
+7zip*/
+temp/
+TIMSDK\TIMSDK/TIMSDK\TIMSDK.csproj.user
+TestResults
+*.suo
+*.user
+*.exe
+
+/templates
+.vs/
