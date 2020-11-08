@@ -1,2 +1,2 @@
 # TIMCSharpSDK
-腾讯TIM ChsharpSDK
+腾讯TIM CSharpSDK
